@@ -3,10 +3,10 @@
 # Assignment by Yoav Leibovici
 # ID: 212433445
 
-Num <- c(1, 2, 3, 4, 5, 6)
-Gender <- c('male', 'male', 'male', 'male', 'female', 'female')
-Age <- c(15, 23, 34, 24, 25, 36)
-Depressed <- c(1, 1, 0, 1, 0, 0)
+Num <- 1:6  
+Gender <- sample(c("male", "female"), size = 6, replace = TRUE)  
+Age <- runif(6,15,40)  
+Depressed <- rbinom(6, size = 1, prob = 0.5)  
 df <- data.frame(Num, Gender, Age, Depressed)
-write.csv(df, file = "C:/yoav python/Rcourse/df.csv")
+write.csv(df,file = "C:/yoav python/Rcourse/df.csv")
 
